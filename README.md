@@ -62,6 +62,8 @@ useEventListener('body', {
  Example:
  event="mouseover.click=clickMe.test" or event="mouseover.click=clickMe().test()"
 
+ NB: The order of events and handlers is important!
+
 -->
 
 <body event="click=clickMe">
