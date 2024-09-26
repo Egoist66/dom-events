@@ -31,12 +31,42 @@ import { useEventListener } from './path/to/useEventListener';
 ```javascript
 const button = document.querySelector('#myButton');
 
-useEventListener(button, {
-    click: () => {
+useEventListener('body', {
+    clickMe: () => {
         console.log('Button clicked!');
     },
     clear: false
 });
+```
+
+```html
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- Here we pass "event" attrubute with value "click=clickMe"
+ 
+ "click" - event name
+ "clickMe" - event handler
+
+ Library will automatically convert "click=clickMe" to event handler
+
+-->
+
+<body event="click=clickMe">
+
+    <script
+       type="module" src="./useEventListener.min.js"></script>
+    <script type="module" src="./index.js"></script>
+</body>
+
+</html>
 ```
 
 ## Как это работает
