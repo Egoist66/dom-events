@@ -57,6 +57,11 @@ useEventListener('body', {
 
  Library will automatically convert "click=clickMe" to event handler
 
+ Also you can register several events and handlers for the same element
+ 
+ Example:
+ event="mouseover.click=clickMe.test" or event="mouseover.click=clickMe().test()"
+
 -->
 
 <body event="click=clickMe">
